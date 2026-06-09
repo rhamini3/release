@@ -1,19 +1,20 @@
 approve:
 - repos:
-  - openshift-priv/cluster-api-provider-openshift-assisted
+  - openshift-priv/openstack-networking-generic-switch
   require_self_approval: false
 lgtm:
 - repos:
-  - openshift-priv/cluster-api-provider-openshift-assisted
+  - openshift-priv/openstack-networking-generic-switch
   review_acts_as_lgtm: true
 plugins:
-  openshift-priv/cluster-api-provider-openshift-assisted:
+  openshift-priv/openstack-networking-generic-switch:
     plugins:
     - approve
     - assign
     - blunderbuss
     - cat
     - dog
+    - golint
     - goose
     - heart
     - help
@@ -24,21 +25,19 @@ plugins:
     - lifecycle
     - override
     - owners-label
+    - pony
     - retitle
     - shrug
-    - size
+    - sigmention
     - skip
     - trigger
     - verify-owners
-    - welcome
     - wip
     - yuks
 triggers:
 - org_invite:
     prominent: {}
   repos:
-  - openshift-priv/cluster-api-provider-openshift-assisted
+  - openshift-priv/openstack-networking-generic-switch
   trusted_apps:
-  - dependabot
-  - red-hat-konflux
   - openshift-merge-bot
